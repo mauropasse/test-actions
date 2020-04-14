@@ -31,9 +31,10 @@ jobs:
       uses: actions/checkout@master
       with:
           repository: irobot-ros/ros2-performance
+          working-directory: ./ros2-performance
 
     - name: Display the path
-      run: echo $PATH; echo $PWD; ls
+      run: echo $PWD; ls
       shell: bash
 
     - name: build test
