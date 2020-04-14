@@ -2,6 +2,8 @@
 
 THIS_DIR=$PWD
 
+echo "THIS_DIR: $THIS_DIR"
+
 # Download our perf framework
 git clone https://github.com/irobot-ros/ros2-performance
 
@@ -9,10 +11,14 @@ git clone https://github.com/irobot-ros/ros2-performance
 cd $THIS_DIR/ros2-performance/cross-compiling
 bash get_ros2_sources.sh master
 
+mv ros2_cc_ws $THIS_DIR
+
+ls $THIS_DIR
+
 cd $THIS_DIR/ros2_cc_ws/src/ros2
 
 # Download our perf framework
-cp $THIS_DIR/ros2-performance/performances .
+cp -r $THIS_DIR/ros2-performance/performances .
 
 # Use my own RCLCPP
 rm -rf rclcpp
