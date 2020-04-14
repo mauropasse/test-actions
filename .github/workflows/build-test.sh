@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-ls
 THIS_DIR=$PWD
+
+# Download our perf framework
+git clone https://github.com/irobot-ros/ros2-performance
 
 # Static Executor with waitable
 cd $THIS_DIR/ros2-performance/cross-compiling
@@ -10,7 +12,7 @@ bash get_ros2_sources.sh master
 cd $THIS_DIR/ros2_cc_ws/src/ros2
 
 # Download our perf framework
-git clone https://github.com/irobot-ros/ros2-performance
+cp $THIS_DIR/ros2-performance/performances .
 
 # Use my own RCLCPP
 rm -rf rclcpp
