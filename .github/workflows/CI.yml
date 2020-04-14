@@ -33,6 +33,11 @@ jobs:
    #   with:
    #       repository: irobot-ros/ros2-performance
    #       working-directory: ./ros2-performance
+     
+    - name: Display the path
+      run: ls; echo $PWD; find . -name build-test.sh
+      shell: bash
 
     - name: build test
-      run: bash .github/workflows/build-test.sh
+      run: bash build-test.sh
+      working-directory: .github/workflows/build-test.sh
