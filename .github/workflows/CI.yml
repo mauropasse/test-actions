@@ -3,7 +3,7 @@ name: "Test ROS2 actions"
 on:
   schedule:
     # Run the CI automatically nighly.
-    - cron:  '0 6 * * *'
+    - cron:  '0 * * * *'
       
 env:
   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
@@ -24,4 +24,4 @@ jobs:
       with:
         package-name: rmw_cyclonedds_cpp
         vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/${{ matrix.rosdistro }}/ros2.repos
-    - run: .github/workflows/build-test.sh
+    - run: build-test.sh
