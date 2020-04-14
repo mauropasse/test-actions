@@ -19,11 +19,13 @@ rm -rf rclcpp
 git clone https://github.com/mauropasse/rclcpp.git
 
 # Ignore packages
-cd $THIS_DIR/ros2-performance/cross-compiling
-source env.sh raspbian
-bash ignore_pkgs.sh $THIS_DIR/ros2_cc_ws/ master
+# cd $THIS_DIR/ros2-performance/cross-compiling
+# source env.sh raspbian
+# bash ignore_pkgs.sh $THIS_DIR/ros2_cc_ws/ master
 
 # Compile
+cd $THIS_DIR/ros2_cc_ws
+
 colcon \
     build \
     --merge-install \
