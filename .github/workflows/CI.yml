@@ -28,15 +28,11 @@ jobs:
     #    vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/${{ matrix.rosdistro }}/ros2.repos
 
 
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-          repository: irobot-ros/ros2-performance
-          working-directory: ./ros2-performance
-
-    - name: Create ros2-performance directory
-      run: mkdir ros2-performance; mv * $_; cd $_; echo $PWD; ls;
-      shell: bash
+   # - name: Checkout
+   #   uses: actions/checkout@master
+   #   with:
+   #       repository: irobot-ros/ros2-performance
+   #       working-directory: ./ros2-performance
 
     - name: build test
       run: bash .github/workflows/build-test.sh
