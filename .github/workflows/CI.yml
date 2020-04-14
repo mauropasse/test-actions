@@ -1,9 +1,9 @@
 
 name: "Test ROS2 actions"
 on:
-  schedule:
+  # schedule:
     # Run the CI automatically nighly.
-    - cron:  '0 * * * *'
+    # - cron:  '0 0 * * *'
   push:
       
 env:
