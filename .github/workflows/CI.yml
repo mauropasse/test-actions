@@ -28,8 +28,8 @@ jobs:
     #    vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/${{ matrix.rosdistro }}/ros2.repos
 
 
-   # - name: Checkout
-   #   uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@master
    #   with:
    #       repository: irobot-ros/ros2-performance
    #       working-directory: ./ros2-performance
