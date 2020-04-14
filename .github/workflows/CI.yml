@@ -32,5 +32,9 @@ jobs:
       with:
           repository: irobot-ros/ros2-performance
 
+    - name: Display the path
+      run: echo $PATH; echo $PWD; ls
+      shell: bash
+
     - name: build test
       run: bash .github/workflows/build-test.sh
