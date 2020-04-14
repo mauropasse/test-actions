@@ -27,12 +27,10 @@ jobs:
     #    package-name: rmw_cyclonedds_cpp
     #    vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/${{ matrix.rosdistro }}/ros2.repos
 
-
     - name: Checkout
-      uses: actions/checkout@v1
-        
-    - name: Get performance framework
-      uses: irobot-ros/ros2-performance/checkout@master
+      uses: actions/checkout@master
+        with:
+          name: irobot-ros/ros2-performance
 
     - name: build test
       run: bash .github/workflows/build-test.sh
