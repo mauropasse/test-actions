@@ -39,5 +39,4 @@ jobs:
       shell: bash
 
     - name: build test
-      run: bash build-test.sh
-      working-directory: .github/workflows/build-test.sh
+      run: bash .github/workflows/build-test.sh
