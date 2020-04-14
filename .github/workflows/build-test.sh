@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 ls
-THIS_DIR = $PWD
-
-
+THIS_DIR=$PWD
 
 # Static Executor with waitable
 cd ros2-performance/cross-compiling
