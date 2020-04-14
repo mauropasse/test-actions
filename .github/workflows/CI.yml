@@ -27,9 +27,6 @@ jobs:
     #    package-name: rmw_cyclonedds_cpp
     #    vcs-repo-file-url: https://raw.githubusercontent.com/ros2/ros2/${{ matrix.rosdistro }}/ros2.repos
 
-    - name: Create ros2-performance directory
-      run: mkdir ros2-performance; cd $_;
-      shell: bash
 
     - name: Checkout
       uses: actions/checkout@master
@@ -37,8 +34,8 @@ jobs:
           repository: irobot-ros/ros2-performance
           working-directory: ./ros2-performance
 
-    - name: Display the directoty
-      run: echo $PWD; ls
+    - name: Create ros2-performance directory
+      run: mkdir ros2-performance; mv * $_; cd $_; echo $PWD; ls;
       shell: bash
 
     - name: build test
