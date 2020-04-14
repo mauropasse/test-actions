@@ -30,7 +30,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
       with:
-          name: irobot-ros/ros2-performance
+          repository: irobot-ros/ros2-performance
 
     - name: build test
       run: bash .github/workflows/build-test.sh
