@@ -19,6 +19,12 @@ cp -r $THIS_DIR/ros2-performance/performances .
 rm -rf rclcpp
 git clone https://github.com/mauropasse/rclcpp.git -b mauro/master
 
+# Install ROS2 dependencies (colcon build fails otherwise)
+# Or as temporary workaround: ignore packages
+cd $THIS_DIR/ros2-performance/cross-compiling
+source env.sh raspbian
+bash ignore_pkgs.sh $HOME/ros2_cc_ws
+
 # Compile
 cd $HOME/ros2_cc_ws
 
