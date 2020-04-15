@@ -14,15 +14,15 @@ ls
 cd $THIS_DIR/ros2-performance/cross-compiling
 bash get_ros2_sources.sh master
 
-echo "I'm in: $PWD. There are:"
+echo "I'm in: $PWD. ls:"
 
-ls $THIS_DIR
+ls
 
 cd $THIS_DIR/ros2_cc_ws/src/ros2
 
-echo "I'm in: $PWD. There are:"
+echo "I'm in: $PWD. ls:"
 
-ls $THIS_DIR
+ls
 
 # # Download our perf framework
 # cp -r $THIS_DIR/ros2-performance/performances .
