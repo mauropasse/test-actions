@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 THIS_DIR=$PWD
+HOME=/home/runner
 
 echo "THIS_DIR: $THIS_DIR"
 
@@ -18,7 +19,7 @@ echo "I'm in: $PWD. ls:"
 
 ls
 
-cd $THIS_DIR/ros2_cc_ws/src/ros2
+cd $HOME/ros2_cc_ws/src/ros2
 
 echo "I'm in: $PWD. ls:"
 
