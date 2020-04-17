@@ -3,7 +3,6 @@ on: [push]
 jobs:
   docker test:
     runs-on: ubuntu-latest
-    name: A name
     steps:
-    - name: A name step
+    - name: Carlos
       uses: actions/test-actions@v1
