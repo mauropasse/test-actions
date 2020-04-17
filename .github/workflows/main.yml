@@ -4,5 +4,5 @@ jobs:
   dockertest:
     runs-on: ubuntu-latest
     steps:
-    - name: Carlos
+    - name: Mauro
       uses: actions/test-actions@v1
