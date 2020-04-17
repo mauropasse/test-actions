@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  docker test:
+    runs-on: ubuntu-latest
+    name: A name
+    steps:
+    - name: A name step
+      uses: actions/test-actions@v1
