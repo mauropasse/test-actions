@@ -11,12 +11,10 @@ env:
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
-      matrix:
-          rosdistro: [master]
-          os: [ubuntu-18.04]
+
     steps:
     - name: Acquire ROS dependencies
       uses: ros-tooling/setup-ros@0.0.17
